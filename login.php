@@ -12,9 +12,9 @@ if(empty($username)){
 if(empty($password)){
     $password_error = '<p class="er" > please enter your password </p> <br>';
     $err_s = 1;
-    include('bus school.php');
+    include('index.php');
 }else{
-    include('bus school.php');
+    include('index.php');
 }
 if(!isset($err_s)){
     $sql = "SELECT us_name FROM user WHERE us_name = '$username'";
@@ -26,7 +26,7 @@ if(!isset($err_s)){
         exit();
     }else{
         $user_error = '<p class = "er" > wrong username or password </p> <br>';
-        include('bus school.php');
+        include('index.php');
         exit();
     }
 }
